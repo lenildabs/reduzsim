@@ -930,14 +930,19 @@ body {
 }
 
 .rs-monthly-row {
-  align-items: stretch;
   background: var(--bg);
   border: 1px solid var(--border);
   border-radius: 10px;
   display: grid;
-  gap: .65rem;
-  grid-template-columns: 92px 96px 122px 116px 1fr 118px;
+  gap: .55rem;
   padding: .75rem;
+}
+
+.rs-monthly-main {
+  align-items: stretch;
+  display: grid;
+  gap: .65rem;
+  grid-template-columns: 92px 96px minmax(118px, 1fr) 132px 132px;
 }
 
 .rs-monthly-row span {
@@ -978,7 +983,7 @@ body {
 
 .rs-monthly-breakdown {
   display: grid;
-  gap: .45rem;
+  gap: .55rem;
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
@@ -990,7 +995,7 @@ body {
 }
 
 .rs-monthly-breakdown strong {
-  font-size: .74rem;
+  font-size: .82rem;
   white-space: nowrap;
 }
 
@@ -1099,7 +1104,7 @@ body {
   .rs-summary-grid,
   .rs-mini-grid,
   .rs-remuneracao-row,
-  .rs-monthly-row,
+  .rs-monthly-main,
   .rs-final-dashboard,
   .rs-mini-chart,
   .rs-service-grid,
