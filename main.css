@@ -924,6 +924,86 @@ body {
   text-transform: uppercase;
 }
 
+.rs-monthly-list {
+  display: grid;
+  gap: .7rem;
+}
+
+.rs-monthly-row {
+  align-items: stretch;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  display: grid;
+  gap: .65rem;
+  grid-template-columns: 92px 96px 122px 116px 1fr 118px;
+  padding: .75rem;
+}
+
+.rs-monthly-row span {
+  color: var(--gray);
+  display: block;
+  font-size: .62rem;
+  font-weight: 800;
+  letter-spacing: .35px;
+  margin-bottom: .25rem;
+  text-transform: uppercase;
+}
+
+.rs-monthly-row strong {
+  color: var(--dark);
+  display: block;
+  font-size: .82rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.rs-monthly-row label {
+  margin: 0;
+}
+
+.rs-monthly-row .rs-table-input {
+  max-width: none;
+  width: 100%;
+}
+
+.rs-monthly-competencia,
+.rs-monthly-money,
+.rs-monthly-total {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: .5rem .6rem;
+}
+
+.rs-monthly-breakdown {
+  display: grid;
+  gap: .45rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.rs-monthly-breakdown div {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: .45rem .5rem;
+}
+
+.rs-monthly-breakdown strong {
+  font-size: .74rem;
+  white-space: nowrap;
+}
+
+.rs-monthly-total {
+  background: var(--green-light);
+  border-color: rgba(26, 160, 123, .34);
+}
+
+.rs-monthly-total strong {
+  color: var(--green-dark);
+  font-size: .95rem;
+}
+
 .rs-formula-step {
   align-items: center;
   background: var(--bg);
@@ -1019,6 +1099,7 @@ body {
   .rs-summary-grid,
   .rs-mini-grid,
   .rs-remuneracao-row,
+  .rs-monthly-row,
   .rs-final-dashboard,
   .rs-mini-chart,
   .rs-service-grid,
@@ -1033,6 +1114,10 @@ body {
   .rs-preview-percent {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .rs-monthly-breakdown {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .rs-final-hero {

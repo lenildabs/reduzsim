@@ -103,20 +103,38 @@ function renderRows(rows) {
   body.innerHTML = "";
 
   rows.forEach((row) => {
-    const tr = document.createElement("tr");
-    tr.dataset.monthRow = row.month;
-    tr.innerHTML = `
-      <td>${row.month}</td>
-      <td><input class="rs-table-input" data-field="selic" type="number" step="0.01" value="${row.selic}"></td>
-      <td><input class="rs-table-input" data-field="remAtualizada" type="number" step="0.01" value="${row.remAtualizada}"></td>
-      <td>R$ ${fmt(row.remOriginal)}</td>
-      <td>R$ ${fmt(row.cpp)}</td>
-      <td>R$ ${fmt(row.multaMora)}</td>
-      <td>R$ ${fmt(row.juros)}</td>
-      <td>R$ ${fmt(row.maed)}</td>
-      <td>R$ ${fmt(row.total)}</td>
+    const item = document.createElement("div");
+    item.className = "rs-monthly-row";
+    item.dataset.monthRow = row.month;
+    item.innerHTML = `
+      <div class="rs-monthly-competencia">
+        <span>Competência</span>
+        <strong>${row.month}</strong>
+      </div>
+      <label>
+        <span>SELIC (%)</span>
+        <input class="rs-table-input" data-field="selic" type="number" step="0.01" value="${row.selic}">
+      </label>
+      <label>
+        <span>Rem. atualizada</span>
+        <input class="rs-table-input" data-field="remAtualizada" type="number" step="0.01" value="${row.remAtualizada}">
+      </label>
+      <div class="rs-monthly-money">
+        <span>Rem. original</span>
+        <strong>R$ ${fmt(row.remOriginal)}</strong>
+      </div>
+      <div class="rs-monthly-breakdown">
+        <div><span>CPP</span><strong>R$ ${fmt(row.cpp)}</strong></div>
+        <div><span>Multa</span><strong>R$ ${fmt(row.multaMora)}</strong></div>
+        <div><span>Juros</span><strong>R$ ${fmt(row.juros)}</strong></div>
+        <div><span>MAED</span><strong>R$ ${fmt(row.maed)}</strong></div>
+      </div>
+      <div class="rs-monthly-total">
+        <span>Total</span>
+        <strong>R$ ${fmt(row.total)}</strong>
+      </div>
     `;
-    body.appendChild(tr);
+    body.appendChild(item);
   });
 }
 
