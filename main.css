@@ -1027,7 +1027,7 @@ body {
 .rs-monthly-row span {
   color: var(--gray);
   display: block;
-  font-size: .62rem;
+  font-size: .68rem;
   font-weight: 800;
   letter-spacing: .35px;
   margin-bottom: .25rem;
@@ -1037,7 +1037,7 @@ body {
 .rs-monthly-row strong {
   color: var(--dark);
   display: block;
-  font-size: .82rem;
+  font-size: .92rem;
   font-weight: 800;
   line-height: 1.2;
 }
@@ -1047,7 +1047,9 @@ body {
 }
 
 .rs-monthly-row .rs-table-input {
+  font-size: .98rem;
   max-width: none;
+  min-height: 38px;
   width: 100%;
 }
 
@@ -1067,7 +1069,7 @@ body {
 
 .rs-monthly-total strong {
   color: var(--green-dark);
-  font-size: .95rem;
+  font-size: 1rem;
 }
 
 .rs-formula-step {
