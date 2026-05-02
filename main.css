@@ -950,7 +950,7 @@ body {
   padding: 1.05rem 1.1rem;
 }
 
-.rs-rmt-card span {
+.rs-rmt-card > span {
   color: var(--gray);
   display: block;
   font-size: .68rem;
@@ -966,6 +966,16 @@ body {
   font-size: 1.45rem;
   font-weight: 800;
   line-height: 1.15;
+}
+
+.rs-rmt-card strong span {
+  color: inherit;
+  display: inline;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: 0;
+  margin: 0;
+  text-transform: none;
 }
 
 .rs-rmt-card small {
@@ -1032,6 +1042,10 @@ body {
   letter-spacing: .35px;
   margin-bottom: .25rem;
   text-transform: uppercase;
+}
+
+.rs-monthly-row label span {
+  white-space: nowrap;
 }
 
 .rs-monthly-row strong {
