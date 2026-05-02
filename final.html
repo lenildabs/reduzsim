@@ -64,64 +64,39 @@
       </div>
     </section>
 
-    <section class="rs-card">
+    <section class="rs-card rs-work-summary">
       <div class="rs-section-title rs-section-title--compact">
         Resumo da obra
       </div>
-      <div class="row g-2">
-        <div class="col-md-3">
-          <div class="rs-info-block">
-            <div class="rs-info-label">Cliente</div>
-            <div class="rs-info-value" id="cliente-nome">-</div>
-          </div>
+
+      <div class="rs-work-overview">
+        <div class="rs-work-person">
+          <span>Cliente</span>
+          <strong id="cliente-nome">-</strong>
+          <small id="cliente-telefone">-</small>
         </div>
-        <div class="col-md-3">
-          <div class="rs-info-block">
-            <div class="rs-info-label">Telefone</div>
-            <div class="rs-info-value" id="cliente-telefone">-</div>
-          </div>
+        <div class="rs-work-area">
+          <span>Área total da obra</span>
+          <strong><span id="area-total">0,00</span> m²</strong>
+          <small>UF <span id="uf">-</span></small>
         </div>
-        <div class="col-md-3">
-          <div class="rs-info-block">
-            <div class="rs-info-label">UF</div>
-            <div class="rs-info-value" id="uf">-</div>
-          </div>
+      </div>
+
+      <div class="rs-work-details">
+        <div>
+          <span>Enquadramento</span>
+          <strong id="destinacao">-</strong>
+          <small>Tipo: <span id="tipo-obra">-</span></small>
         </div>
-        <div class="col-md-3">
-          <div class="rs-info-block">
-            <div class="rs-info-label">Área total</div>
-            <div class="rs-info-value"><span id="area-total">0,00</span> m²</div>
-          </div>
+        <div>
+          <span>Responsável pela obra</span>
+          <strong id="responsavel-obra">-</strong>
+          <small>Informado no cadastro inicial</small>
         </div>
-        <div class="col-md-4">
-          <div class="rs-info-block">
-            <div class="rs-info-label">Responsável</div>
-            <div class="rs-info-value" id="responsavel-obra">-</div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="rs-info-block">
-            <div class="rs-info-label">Destinação</div>
-            <div class="rs-info-value" id="destinacao">-</div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="rs-info-block">
-            <div class="rs-info-label">Tipo de obra</div>
-            <div class="rs-info-value" id="tipo-obra">-</div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="rs-info-block">
-            <div class="rs-info-label">Início da obra</div>
-            <div class="rs-info-value" id="data-inicio-obra">-</div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="rs-info-block">
-            <div class="rs-info-label">Final da obra</div>
-            <div class="rs-info-value" id="data-fim-obra">-</div>
-          </div>
+        <div>
+          <span>Período da obra</span>
+          <strong><span id="data-inicio-obra">-</span> a <span id="data-fim-obra">-</span></strong>
+          <small>Competências usadas no cálculo de redução</small>
         </div>
       </div>
     </section>

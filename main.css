@@ -794,6 +794,73 @@ body {
   font-weight: 600;
 }
 
+.rs-work-summary {
+  overflow: hidden;
+}
+
+.rs-work-overview {
+  display: grid;
+  gap: .85rem;
+  grid-template-columns: 1.2fr .8fr;
+  margin-bottom: .85rem;
+}
+
+.rs-work-person,
+.rs-work-area {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.1rem;
+}
+
+.rs-work-area {
+  background: var(--green-light);
+  border-color: rgba(26, 160, 123, .35);
+}
+
+.rs-work-summary span {
+  color: var(--gray);
+  display: block;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .4px;
+  margin-bottom: .3rem;
+  text-transform: uppercase;
+}
+
+.rs-work-summary strong {
+  color: var(--dark);
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.rs-work-summary small {
+  color: var(--gray);
+  display: block;
+  font-size: .82rem;
+  font-weight: 600;
+  margin-top: .35rem;
+}
+
+.rs-work-area strong {
+  color: var(--green-dark);
+  font-size: 1.35rem;
+}
+
+.rs-work-details {
+  display: grid;
+  gap: .75rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.rs-work-details > div {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: .85rem .95rem;
+}
+
 .rs-calc-row {
   display: flex;
   flex-wrap: wrap;
@@ -956,7 +1023,9 @@ body {
   .rs-mini-chart,
   .rs-service-grid,
   .rs-note-grid,
-  .rs-preview-reduction {
+  .rs-preview-reduction,
+  .rs-work-overview,
+  .rs-work-details {
     grid-template-columns: 1fr;
   }
 
@@ -1162,5 +1231,39 @@ body {
 
   .rs-info-value {
     font-size: .78rem;
+  }
+
+  .rs-work-overview {
+    gap: .45rem;
+    margin-bottom: .45rem;
+  }
+
+  .rs-work-person,
+  .rs-work-area,
+  .rs-work-details > div {
+    padding: .55rem .65rem;
+  }
+
+  .rs-work-summary span {
+    font-size: .56rem;
+    margin-bottom: .2rem;
+  }
+
+  .rs-work-summary strong {
+    font-size: .86rem;
+  }
+
+  .rs-work-summary small {
+    font-size: .68rem;
+    margin-top: .18rem;
+  }
+
+  .rs-work-area strong {
+    font-size: 1rem;
+  }
+
+  .rs-work-details {
+    gap: .45rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
