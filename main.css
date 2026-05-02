@@ -818,7 +818,9 @@ body {
   border-color: rgba(26, 160, 123, .35);
 }
 
-.rs-work-summary span {
+.rs-work-summary .rs-work-person > span,
+.rs-work-summary .rs-work-area > span,
+.rs-work-details > div > span {
   color: var(--gray);
   display: block;
   font-size: .72rem;
@@ -831,22 +833,33 @@ body {
 .rs-work-summary strong {
   color: var(--dark);
   display: block;
-  font-size: 1.15rem;
+  font-size: 1.28rem;
   font-weight: 800;
   line-height: 1.2;
+}
+
+.rs-work-summary strong span {
+  color: inherit;
+  display: inline;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: 0;
+  margin: 0;
+  text-transform: none;
 }
 
 .rs-work-summary small {
   color: var(--gray);
   display: block;
-  font-size: .82rem;
-  font-weight: 600;
-  margin-top: .35rem;
+  font-size: .95rem;
+  font-weight: 650;
+  line-height: 1.35;
+  margin-top: .45rem;
 }
 
 .rs-work-area strong {
   color: var(--green-dark);
-  font-size: 1.35rem;
+  font-size: 1.55rem;
 }
 
 .rs-work-details {
@@ -922,6 +935,16 @@ body {
   font-weight: 700;
   letter-spacing: .4px;
   text-transform: uppercase;
+}
+
+.rs-work-summary small span {
+  color: inherit;
+  display: inline;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: 0;
+  margin: 0;
+  text-transform: none;
 }
 
 .rs-monthly-list {
@@ -1414,22 +1437,24 @@ body {
     padding: .55rem .65rem;
   }
 
-  .rs-work-summary span {
+  .rs-work-summary .rs-work-person > span,
+  .rs-work-summary .rs-work-area > span,
+  .rs-work-details > div > span {
     font-size: .56rem;
     margin-bottom: .2rem;
   }
 
   .rs-work-summary strong {
-    font-size: .86rem;
+    font-size: 1rem;
   }
 
   .rs-work-summary small {
-    font-size: .68rem;
-    margin-top: .18rem;
+    font-size: .76rem;
+    margin-top: .22rem;
   }
 
   .rs-work-area strong {
-    font-size: 1rem;
+    font-size: 1.12rem;
   }
 
   .rs-work-details {
