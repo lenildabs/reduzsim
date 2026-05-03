@@ -875,24 +875,31 @@ body {
 }
 
 .rs-final-contact {
-  background: #f8fafc;
-  border: 1px solid var(--border);
-  border-left: 6px solid var(--green);
+  background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+  border: 1px solid rgba(255, 255, 255, .26);
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  box-shadow: 0 12px 32px rgba(0, 128, 96, .22);
   display: grid;
   gap: .75rem;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-bottom: 1.25rem;
-  padding: 1rem 1.1rem;
+  padding: 1.1rem;
+}
+
+.rs-final-contact-title {
+  color: #fff;
+  font-size: .95rem;
+  font-weight: 800;
+  grid-column: 1 / -1;
+  letter-spacing: 0;
 }
 
 .rs-final-contact-item,
 .rs-final-contact-address {
-  background: var(--white);
-  border: 1px solid #e2e8f0;
+  background: rgba(255, 255, 255, .12);
+  border: 1px solid rgba(255, 255, 255, .26);
   border-radius: 8px;
-  padding: .8rem .9rem;
+  padding: .85rem .95rem;
 }
 
 .rs-final-contact-address {
@@ -900,7 +907,7 @@ body {
 }
 
 .rs-final-contact span {
-  color: var(--gray);
+  color: rgba(255, 255, 255, .78);
   display: block;
   font-size: .72rem;
   font-weight: 800;
@@ -910,7 +917,7 @@ body {
 }
 
 .rs-final-contact strong {
-  color: var(--dark);
+  color: #fff;
   display: block;
   font-size: 1.05rem;
   font-weight: 800;
@@ -920,6 +927,10 @@ body {
 .rs-final-contact-address strong {
   font-size: .92rem;
   font-weight: 700;
+}
+
+.rs-indices-update {
+  font-weight: 650;
 }
 
 .rs-calc-row {
@@ -1523,6 +1534,10 @@ body {
   .rs-final-contact-item,
   .rs-final-contact-address {
     padding: .5rem .6rem;
+  }
+
+  .rs-final-contact-title {
+    font-size: .76rem;
   }
 
   .rs-final-contact span {

@@ -42,6 +42,10 @@ def today_brasilia() -> dt.date:
     return (dt.datetime.now(dt.UTC) - dt.timedelta(hours=3)).date()
 
 
+def now_brasilia() -> dt.datetime:
+    return dt.datetime.now(dt.UTC) - dt.timedelta(hours=3)
+
+
 def add_month(year: int, month: int, delta: int) -> tuple[int, int]:
     index = (year * 12 + (month - 1)) + delta
     return index // 12, index % 12 + 1
@@ -79,6 +83,15 @@ def replace_const(text: str, const_name: str, replacement: str, kind: str) -> st
     opener = "[" if kind == "array" else "{"
     closer = "]" if kind == "array" else "}"
     pattern = rf"const {re.escape(const_name)} = \{opener}\n.*?\n\{closer};"
+    updated, count = re.subn(pattern, replacement, text, flags=re.S)
+    if count != 1:
+        raise RuntimeError(f"Não foi possível substituir {const_name} em JS.")
+    return updated
+
+
+def replace_string_const(text: str, const_name: str, value: str) -> str:
+    replacement = f'const {const_name} = "{value}";'
+    pattern = rf'const {re.escape(const_name)} = ".*?";'
     updated, count = re.subn(pattern, replacement, text, flags=re.S)
     if count != 1:
         raise RuntimeError(f"Não foi possível substituir {const_name} em JS.")
@@ -215,6 +228,14 @@ def update_vau(reference: dt.date, force: bool = False) -> None:
     print(f"VAU atualizado para {target_month}.")
 
 
+def update_metadata(timestamp: dt.datetime) -> None:
+    label = timestamp.strftime("%d/%m/%Y às %H:%M")
+    text = REDUCAO_JS.read_text(encoding="utf-8")
+    text = replace_string_const(text, "INDICES_UPDATED_AT", label)
+    REDUCAO_JS.write_text(text, encoding="utf-8", newline="\n")
+    print(f"Metadados de atualização gravados: {label}.")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--force-vau", action="store_true", help="Atualiza o VAU mesmo se o mês já estiver igual.")
@@ -223,6 +244,7 @@ def main() -> int:
     reference = today_brasilia()
     update_selic(reference)
     update_vau(reference, force=args.force_vau)
+    update_metadata(now_brasilia())
     return 0
 
 

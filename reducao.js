@@ -20,6 +20,8 @@ const SELIC_ACUMULADA = {
   "2026-04": 0.00, "2026-05": 0.00,
 };
 
+const INDICES_UPDATED_AT = "03/05/2026 às 17:29";
+
 let formData = {};
 let receitaResult = {};
 
@@ -270,6 +272,7 @@ function finalizeCalculation() {
   }
 
   document.getElementById("data-referencia").value = new Date().toISOString().slice(0, 10);
+  setText("indices-update-note", `Os índices foram atualizados pela última vez no dia ${INDICES_UPDATED_AT}.`);
   document.getElementById("recalc-btn").addEventListener("click", finalizeCalculation);
   document.getElementById("copy-first-remuneracao").addEventListener("click", copyFirstRemuneracaoToAll);
   document.getElementById("honorarios-percent").addEventListener("input", () => recalculate(true));
