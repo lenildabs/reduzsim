@@ -888,6 +888,14 @@ body {
   padding: .85rem .95rem;
 }
 
+.rs-work-details > div > strong {
+  font-size: 1.08rem;
+}
+
+.rs-work-details > div > small {
+  font-size: .86rem;
+}
+
 .rs-final-contact {
   background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
   border: 1px solid rgba(255, 255, 255, .26);
@@ -1522,9 +1530,17 @@ body {
     font-size: 1rem;
   }
 
+  .rs-work-details > div > strong {
+    font-size: .86rem;
+  }
+
   .rs-work-summary small {
     font-size: .76rem;
     margin-top: .22rem;
+  }
+
+  .rs-work-details > div > small {
+    font-size: .68rem;
   }
 
   .rs-work-area strong {
