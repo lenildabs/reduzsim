@@ -753,17 +753,17 @@ body {
 }
 
 .rs-summary-card--strong {
-  background: #17211f;
-  border-color: #17211f;
-  color: #fff;
+  background: #f0fbf7;
+  border-color: rgba(26, 160, 123, .48);
+  color: var(--dark);
 }
 
 .rs-summary-card--strong .rs-summary-label {
-  color: rgba(255, 255, 255, .7);
+  color: var(--green-dark);
 }
 
 .rs-summary-card--strong .rs-summary-value {
-  color: #fff;
+  color: var(--dark);
 }
 
 .rs-summary-label {
