@@ -752,6 +752,20 @@ body {
   border-color: rgba(26, 160, 123, .45);
 }
 
+.rs-summary-card--strong {
+  background: #17211f;
+  border-color: #17211f;
+  color: #fff;
+}
+
+.rs-summary-card--strong .rs-summary-label {
+  color: rgba(255, 255, 255, .7);
+}
+
+.rs-summary-card--strong .rs-summary-value {
+  color: #fff;
+}
+
 .rs-summary-label {
   color: var(--gray);
   font-size: .72rem;

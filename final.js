@@ -70,6 +70,7 @@ function fmtDate(value) {
   setText("economia-bruta", fmt(totals.economiaBruta));
   setText("honorarios", fmt(totals.honorarios));
   setText("economia-liquida", fmt(totals.economiaLiquida));
+  setText("total-com-honorarios", fmt((totals.totalReducao || 0) + (totals.honorarios || 0)));
   setText("honorarios-percent", fmtPercent(totals.honorariosPercent));
   setText("cliente-nome", formData.clienteNome || "-");
   setText("cliente-telefone", formData.clienteTelefone || "-");
