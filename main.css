@@ -1110,6 +1110,21 @@ body {
   padding-bottom: .55rem;
 }
 
+.rs-proposal-info--period {
+  grid-column: 1 / -1;
+}
+
+.rs-proposal-info-list--compact .rs-proposal-info:nth-child(3) {
+  grid-column: 1 / -1;
+}
+
+.rs-proposal-info-list--compact .rs-proposal-info:nth-child(4) {
+  border-bottom: 1px solid #d8eee8;
+  grid-column: 2;
+  grid-row: 2;
+  padding-bottom: .55rem;
+}
+
 .rs-proposal-info:last-child,
 .rs-proposal-info-list--compact .rs-proposal-info:nth-last-child(-n+2) {
   border-bottom: 0;
@@ -1130,6 +1145,7 @@ body {
 .rs-proposal-info strong {
   color: #12342e;
   display: block;
+  font-family: "Poppins", sans-serif;
   font-size: .9rem;
   font-weight: 700;
   line-height: 1.24;
@@ -1147,9 +1163,13 @@ body {
   text-transform: none;
 }
 
+.rs-proposal-info--period strong {
+  white-space: nowrap;
+}
+
 .rs-proposal-info .rs-date-separator {
-  display: block;
-  margin: .08rem 0;
+  display: inline;
+  margin: 0 .18rem;
 }
 
 .rs-proposal-economy {
