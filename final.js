@@ -39,6 +39,10 @@ function fmtPercent(value) {
   return toNumber(value).toLocaleString("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
 }
 
+function fmtPercentInt(value) {
+  return Math.round(toNumber(value)).toLocaleString("pt-BR", { maximumFractionDigits: 0 });
+}
+
 function setText(id, value) {
   const el = document.getElementById(id);
   if (el) el.textContent = value;
@@ -84,7 +88,7 @@ function fmtDate(value) {
   const totalComHonorarios = toNumber(totals.totalReducao) + toNumber(totals.honorarios);
 
   setText("final-date", new Date(reducaoResult.calculatedAt || Date.now()).toLocaleString("pt-BR"));
-  setText("percentual-reducao", `${fmtPercent(totals.percentualReducao)}%`);
+  setText("percentual-reducao", `${fmtPercentInt(totals.percentualReducao)}%`);
   setText("sem-reducao", fmt(totals.receita));
   setText("com-reducao", fmt(totals.totalReducao));
   setText("economia-bruta", fmt(totals.economiaBruta));
