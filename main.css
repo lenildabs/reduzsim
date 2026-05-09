@@ -1345,15 +1345,12 @@ body {
 }
 
 .rs-proposal-honorarios-note {
-  background: var(--green-light);
-  border-left: 4px solid var(--green);
-  border-radius: 8px;
-  color: #12342e;
+  color: var(--gray);
   font-size: .78rem;
-  font-weight: 650;
+  font-weight: 400;
   line-height: 1.35;
   margin: 1rem 0 0;
-  padding: .55rem .75rem;
+  padding: 0;
 }
 
 .rs-proposal-services {
@@ -2304,11 +2301,8 @@ body {
   }
 
   .rs-proposal-honorarios-note {
-    border-left-width: 2px;
-    border-radius: 5px;
     font-size: .43rem;
     margin-top: .32rem;
-    padding: .22rem .32rem;
   }
 
   .rs-proposal-services {
