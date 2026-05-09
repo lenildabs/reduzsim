@@ -1852,7 +1852,7 @@ body {
 @media print {
   @page {
     margin: 6mm;
-    size: A4 portrait;
+    size: 210mm 297mm;
   }
 
   html,
