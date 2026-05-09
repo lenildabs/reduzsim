@@ -1344,6 +1344,18 @@ body {
   background: #8bd9c5;
 }
 
+.rs-proposal-honorarios-note {
+  background: var(--green-light);
+  border-left: 4px solid var(--green);
+  border-radius: 8px;
+  color: #12342e;
+  font-size: .78rem;
+  font-weight: 650;
+  line-height: 1.35;
+  margin: 1rem 0 0;
+  padding: .55rem .75rem;
+}
+
 .rs-proposal-services {
   border: 1.5px solid var(--green);
   border-radius: 12px;
@@ -2275,6 +2287,14 @@ body {
 
   .rs-proposal-bar-track {
     height: 34px;
+  }
+
+  .rs-proposal-honorarios-note {
+    border-left-width: 2px;
+    border-radius: 5px;
+    font-size: .43rem;
+    margin-top: .32rem;
+    padding: .22rem .32rem;
   }
 
   .rs-proposal-services {
