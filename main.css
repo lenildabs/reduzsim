@@ -1347,9 +1347,10 @@ body {
 .rs-proposal-services {
   border: 1.5px solid var(--green);
   border-radius: 12px;
-  margin-top: 2.1rem;
-  max-width: 285px;
-  padding: .8rem 1rem .85rem;
+  margin: 2.1rem auto 0;
+  max-width: 540px;
+  padding: .85rem 1rem .9rem;
+  width: 88%;
 }
 
 .rs-proposal-services h3 {
@@ -1361,16 +1362,22 @@ body {
 }
 
 .rs-proposal-services ul {
+  column-gap: .95rem;
   display: grid;
-  gap: .28rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  row-gap: .32rem;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
+.rs-proposal-services li:last-child {
+  grid-column: 1 / -1;
+}
+
 .rs-proposal-services li {
   color: #12342e;
-  font-size: .82rem;
+  font-size: .8rem;
   font-weight: 500;
   line-height: 1.25;
   padding-left: 1.35rem;
@@ -1422,7 +1429,7 @@ body {
 
 .rs-proposal-highlight strong {
   color: #12342e;
-  font-size: 1.95rem;
+  font-size: 1.56rem;
   font-weight: 800;
   white-space: nowrap;
 }
@@ -2261,8 +2268,9 @@ body {
   .rs-proposal-services {
     border-width: 1px;
     margin-top: .75rem;
-    max-width: 180px;
+    max-width: 330px;
     padding: .42rem .55rem .48rem;
+    width: 82%;
   }
 
   .rs-proposal-services h3 {
@@ -2271,7 +2279,7 @@ body {
   }
 
   .rs-proposal-services ul {
-    gap: .14rem;
+    gap: .14rem .38rem;
   }
 
   .rs-proposal-services li {
@@ -2302,6 +2310,6 @@ body {
   }
 
   .rs-proposal-highlight strong {
-    font-size: 1.12rem;
+    font-size: .92rem;
   }
 }
