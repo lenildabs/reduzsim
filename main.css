@@ -1369,7 +1369,7 @@ body {
 .rs-proposal-services ul {
   display: flex;
   flex-direction: column;
-  gap: .62rem;
+  gap: .9rem;
   list-style: disc;
   margin: 0;
   padding: 0 0 0 1.1rem;
@@ -2293,7 +2293,7 @@ body {
   }
 
   .rs-proposal-services ul {
-    gap: .54rem;
+    gap: .78rem;
     padding-left: 1rem;
   }
 
