@@ -2234,7 +2234,7 @@ body {
 
   .rs-proposal-layout {
     align-items: stretch;
-    flex: 0 0 850px;
+    flex: 0 0 815px;
     gap: .78rem;
     grid-template-columns: minmax(210px, .78fr) minmax(0, 1.42fr);
     min-height: 0;
@@ -2242,14 +2242,15 @@ body {
 
   .rs-proposal-sidebar {
     gap: .6rem;
-    grid-template-rows: .86fr .52fr .66fr .82fr;
+    grid-template-rows: auto auto auto 1fr;
     min-height: 0;
   }
 
   .rs-proposal-main {
+    align-content: start;
     display: grid;
     gap: .6rem;
-    grid-template-rows: 205px 1fr;
+    grid-template-rows: auto 560px;
     min-height: 0;
   }
 
@@ -2259,12 +2260,12 @@ body {
     break-inside: avoid;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     min-height: 0;
     padding: .66rem;
   }
 
   .rs-proposal-note-panel {
+    align-content: start;
     border-radius: 8px;
     gap: .45rem;
     padding: .64rem .72rem;
@@ -2273,6 +2274,8 @@ body {
   .rs-proposal-note-panel p {
     font-size: .56rem;
     line-height: 1.32;
+    text-align: justify;
+    text-justify: inter-word;
   }
 
   .rs-proposal-build-panel .rs-proposal-info-list {
@@ -2382,7 +2385,7 @@ body {
   }
 
   .rs-proposal-calcs-head {
-    margin-bottom: .48rem;
+    margin-bottom: .58rem;
   }
 
   .rs-proposal-calcs-head p {
@@ -2391,7 +2394,7 @@ body {
   }
 
   .rs-proposal-bars {
-    gap: .82rem;
+    gap: .95rem;
   }
 
   .rs-proposal-bar-row {
@@ -2412,7 +2415,7 @@ body {
   }
 
   .rs-proposal-bar-track {
-    height: 58px;
+    height: 64px;
   }
 
   .rs-proposal-honorarios-note {
@@ -2464,7 +2467,7 @@ body {
   }
 
   .rs-proposal-highlight {
-    margin-top: .6rem;
+    margin-top: 1rem;
     padding: .62rem .72rem;
   }
 
