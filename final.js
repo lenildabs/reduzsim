@@ -91,7 +91,7 @@ function setDonut(id, percent) {
   const el = document.getElementById(id);
   if (!el) return;
   const value = Math.max(0, Math.min(toNumber(percent), 100));
-  el.style.setProperty("--value", `${value}%`);
+  el.style.setProperty("--value", `${value}`);
 }
 
 function fmtDate(value) {

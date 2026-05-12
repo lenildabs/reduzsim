@@ -1249,15 +1249,39 @@ body {
 
 .rs-donut {
   align-items: center;
-  background:
-    radial-gradient(circle, #fff 0 50%, transparent 51%),
-    conic-gradient(var(--green) 0 var(--value, 0%), #595959 var(--value, 0%) 100%);
   border-radius: 50%;
   display: flex;
   height: 170px;
   justify-content: center;
   margin: .25rem 0 .7rem;
+  position: relative;
   width: 170px;
+}
+
+.rs-donut-svg {
+  display: block;
+  height: 100%;
+  inset: 0;
+  overflow: visible;
+  position: absolute;
+  transform: rotate(-90deg);
+  width: 100%;
+}
+
+.rs-donut-track,
+.rs-donut-value {
+  fill: none;
+  stroke-width: 18;
+}
+
+.rs-donut-track {
+  stroke: #595959;
+}
+
+.rs-donut-value {
+  stroke: var(--green);
+  stroke-dasharray: var(--value, 0) 100;
+  stroke-linecap: butt;
 }
 
 .rs-donut > div {
@@ -1267,7 +1291,9 @@ body {
   display: flex;
   height: 104px;
   justify-content: center;
+  position: relative;
   width: 104px;
+  z-index: 1;
 }
 
 .rs-donut strong {
@@ -2157,7 +2183,7 @@ body {
     break-inside: avoid;
     border-bottom-width: 6px;
     gap: .45rem;
-    margin: .75rem -.82rem -.82rem;
+    margin: auto -.82rem -.82rem;
     min-height: 42px;
     padding: .22rem 0 0 .5rem;
   }
@@ -2208,13 +2234,18 @@ body {
     border: 1px solid #d7dee4;
     border-radius: 10px;
     box-shadow: none;
-    display: block;
-    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(297mm - 12mm);
     overflow: hidden;
     padding: .82rem;
   }
 
   .rs-proposal-header {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin-bottom: .75rem;
   }
 
@@ -2226,14 +2257,17 @@ body {
   .rs-proposal-heading h1 {
     font-size: 1.35rem;
     margin-bottom: .2rem;
+    text-align: right;
   }
 
   .rs-proposal-heading p {
     font-size: .76rem;
+    text-align: right;
   }
 
   .rs-proposal-layout {
     align-items: start;
+    display: grid;
     gap: .7rem;
     grid-template-columns: minmax(205px, .92fr) minmax(0, 1.58fr);
     min-height: 0;
@@ -2241,6 +2275,7 @@ body {
 
   .rs-proposal-sidebar {
     align-content: start;
+    display: grid;
     gap: .58rem;
     min-height: 0;
   }
@@ -2311,7 +2346,7 @@ body {
 
   .rs-proposal-info-list--compact {
     gap: .52rem .65rem;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1.18fr) minmax(0, .82fr);
   }
 
   .rs-proposal-info-list--compact .rs-proposal-info:nth-child(3) {
@@ -2362,6 +2397,20 @@ body {
 
   .rs-proposal-info strong {
     font-size: .76rem;
+    text-decoration: none;
+  }
+
+  .rs-proposal-info a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .rs-proposal-info--period strong {
+    white-space: normal;
+  }
+
+  .rs-proposal-info .rs-date-separator {
+    margin: 0 .12rem;
   }
 
   .rs-donut {
@@ -2389,6 +2438,8 @@ body {
   }
 
   .rs-proposal-calcs-head {
+    align-items: flex-start;
+    flex-direction: row;
     margin-bottom: .58rem;
   }
 
@@ -2471,6 +2522,8 @@ body {
   }
 
   .rs-proposal-highlight {
+    align-items: center;
+    flex-direction: row;
     margin-top: .65rem;
     padding: .62rem .72rem;
   }
